@@ -1,0 +1,473 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global css */
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(0, 0, 0);
+}
+input::search {
+  outline: none;
+}
+
+/* global variables */
+
+/* header area start */
+.header-area {
+  background-color: #f5faff;
+}
+.header-area i {
+  font-size: 14px;
+  color: blue;
+  transition: 0.3s;
+}
+.header-area i:hover {
+  transform: translateY(-4px);
+}
+.header-logo img {
+  width: 110px;
+}
+.header-contact {
+  float: right;
+}
+.header-contact a {
+  margin-right: 10px;
+}
+.vertical-border {
+  margin: 0 auto;
+  height: 25px;
+  width: 1px;
+  border-right: 1px solid blue;
+}
+.header-social {
+  float: right;
+}
+.header-social i {
+  margin: 0 2.5px;
+}
+/* header area end */
+
+/* navigation area start */
+
+.nav-link{
+  color: white;
+}
+/* btn style */
+
+.started-button {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.btn-2::before {
+  content: '';
+  background-color: tomato;
+}
+
+.started-button:hover {
+  color: #000;
+}
+.started-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -158px;
+  height: 55%;
+  width: 100%;
+  background-color: white;
+  z-index: -2;
+  transition: all 0.3s ease-in-out;
+}
+.started-button:hover::before {
+  transform: translateX(158px);
+}
+
+.started-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -158px;
+  height: 50%;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  z-index: -2;
+}
+.started-button:hover::after {
+  transform: translateX(-158px);
+}
+.search {
+  position: relative;
+  color: white;
+}
+.search::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  left: 7px;
+  bottom: 0;
+  background-color: white;
+}
+.search i {
+  color: white;
+}
+.fa-sliders-h {
+  color: #3d59fa;
+  font-size: 25px;
+  border: 0;
+}
+::placeholder {
+  color: white !important;
+  font-weight: 400;
+}
+
+/* navigation area end */
+
+/* ------------------
+banner area start
+--------------------- */
+
+.banner-area {
+  background-color: #051242;
+  position: relative;
+}
+.banner-content {
+  margin-top: 20px;
+  align-items: center;
+  padding-bottom: 130px;
+}
+.banner-content .banner-img {
+  margin-top: 110px;
+  padding-bottom: 8px;
+}
+.banner-content .banner-img img {
+  animation: zoom 7s ease-in-out infinite;
+}
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.banner-content .banner-text {
+  margin-top: 60px;
+}
+.banner-content h1,
+p {
+  margin: 40px 0;
+}
+.banner-content h1 {
+  font-size: 55px;
+  color: white;
+  font-weight: 700;
+}
+.banner-content .banner-text p {
+  color: white;
+}
+
+/* effects area */
+
+/* plus spin */
+
+.plus-spin {
+  position: absolute;
+  top: 200px;
+  left: 40%;
+  width: 25px;
+  height: 3px;
+  background-color: tomato;
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+  z-index: 2;
+}
+.plus-spin::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  width: 25px;
+  height: 3px;
+  background-color: tomato;
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* square spin */
+
+.square-spin {
+  position: absolute;
+  bottom: 150px;
+  left: 42%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid blue;
+  animation: spin 10s linear infinite;
+  z-index: -7;
+}
+
+/* circle spin 1 */
+
+.round-spin1 {
+  position: absolute;
+  bottom: 300px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 3px solid tomato;
+  border-radius: 50%;
+  /* transform: translate3d(140px, 90px, -135px); */
+  animation: run 15s ease-out infinite;
+}
+@keyframes run {
+  0%,
+  100% {
+    transform: translate3d(0);
+  }
+  30% {
+    transform: translate3d(120px, -130px, -13px);
+  }
+  60% {
+    transform: translate3d(273px, -50px, -135px);
+  }
+  90% {
+    transform: translate3d(140px, 90px, -135px);
+  }
+}
+
+/* circle spin 2 */
+.round-spin2 {
+  position: absolute;
+  bottom: 200px;
+  right: 300px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid blue;
+  border-radius: 50%;
+  /* transform: translate3d(140px, 90px, -135px); */
+  animation: run1 15s ease-out infinite;
+}
+@keyframes run1 {
+  0%,
+  100% {
+    transform: translate3d(0);
+  }
+  30% {
+    transform: translate3d(140px, 90px, -135px);
+  }
+  55% {
+    transform: translate3d(273px, -50px, -135px);
+  }
+  75% {
+    transform: translate3d(120px, -130px, -13px);
+  }
+}
+
+/* ------------------
+banner area end
+--------------------- */
+
+/* go to top button */
+.go-top {
+  overflow-x: hidden;
+}
+.go-top-btn {
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  margin-right: 40px;
+  font-size: 30px;
+  color: #3d59fa;
+  /* height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center; */
+  border: 4px solid white;
+  border-radius: 50%;
+  animation: onOff 2s ease-in-out infinite;
+}
+@keyframes onOff {
+  0%,
+  100% {
+    border-color: white;
+  }
+  50% {
+    border-color: #3d59fa;
+  }
+}
+.col-lg-4:hover{
+    background-color: rgb(55, 18, 124);
+    color: white;
+    border-radius: 10px;
+    transform: scale(1.01);
+    transition: .3s;
+}
+.container{
+  padding: 20px;
+}
+.container:hover{
+  box-shadow: 0px 0px 30px rgb(179, 179, 179);
+  transition: 0.3s;
+}
+.container img:hover{
+  transform: scale(1.05);
+  transition: .5s;
+}
+
+/* choose paso area start */
+.choose-paso {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.choose-paso span {
+  color: #3d59fa;
+}
+.title-text {
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(66, 65, 65);
+  padding: 0px 300px;
+}
+.choose-paso .choose-paso-title {
+  margin-bottom: 100px;
+}
+.choose-options .single-option {
+  border-radius: 10px;
+  padding: 12px;
+  align-items: center;
+}
+.choose-options .single-option img {
+  width: 30px;
+  height: 30px;
+  margin-right: 13px;
+}
+.choose-options .single-option span {
+  margin-left: auto;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.choose-options .single-option-inner {
+  background-color: red;
+  display: none;
+  height: 0px;
+}
+.single-option-inner-show {
+  display: block;
+  height: auto;
+}
+.single-option p {
+  margin: 10px 0;
+}
+/* choose paso area end */
+
+/* all team area start */
+
+.all-team-member-area {
+  margin: 60px 0;
+}
+.all-team-member-area .card {
+  border: none;
+  margin-right: 24px;
+  overflow: hidden;
+}
+.all-team-member-area .card img {
+  width: 300px;
+}
+.all-team-member-area .card-group {
+  justify-content: center;
+}
+.card .card-title,
+.card-text {
+  transition: all 0.7s ease-in;
+  transition-delay: 0.3s;
+}
+.card:hover .card-title {
+  color: white;
+}
+.card:hover .card-text {
+  color: white;
+}
+
+.all-team-member-area .card .card-body {
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  background-color: #f5faff;
+  z-index: 5;
+  transition: all 0.5s;
+}
+
+.card-body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 140px;
+  width: 100%;
+  background-color: rgb(0, 0, 83);
+  transform: translateY(140px);
+  transition: all 0.5s;
+}
+.card:hover .card-body::after {
+  z-index: -2;
+  transform: translateY(0px);
+}
+
+.all-team-member-area .card .card-body p {
+  margin-top: 10px;
+}
+
+.team-social a {
+  text-align: center;
+  margin: 0 10px;
+}
+.team-social {
+  visibility: hidden;
+  height: 0;
+  transform: translateY(0px);
+  transition: transform 0.3s ease-in-out;
+  transition-delay: 0.2s;
+}
+.card:hover .team-social {
+  visibility: visible;
+  transform: translateY(-45px);
+  z-index: 55;
+}
+
+.team-social i {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background-color: white;
+  font-size: 16px;
+  border-radius: 50%;
+  color: darkblue;
+  text-align: center;
+}
+
+/* all team area end */
